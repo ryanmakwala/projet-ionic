@@ -7,10 +7,10 @@ import { ApiService } from '../api/api.service';
 })
 export class PatientService {
 
-  constructor(private readonly api: ApiService) { }
+  constructor(private readonly api: ApiService) {}
 
   getAll(): Observable<any> {
-    return null;
+    return this.api.get('api/user/read.php');
   }
 
   getOne(id: number): Observable<any> {
