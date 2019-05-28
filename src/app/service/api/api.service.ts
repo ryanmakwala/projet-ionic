@@ -9,19 +9,16 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
 
   constructor(private readonly http: HttpClient) { }
-  
-  
+
   get(route: string, input?: any): Observable<any> {
     const uri = `${environment.apiUrl}/${route}`;
-    //TODO enrich generic http get method to handle input params
+    // TODO enrich generic http get method to handle input params
     return this.http.get(uri);
   }
 
-  post(route: string, input?:any): Observable<any> {
+  post(route: string, input?: any): Observable<any> {
     const uri = `${environment.apiUrl}/${route}`;
-    //TODO enrich generic http post method to handle input params
+    // TODO enrich generic http post method to handle input params
     return this.http.post(uri, input);
   }
-
-  
 }
